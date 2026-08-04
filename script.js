@@ -37,11 +37,13 @@ const disableBox = () => {
 };
 let showWinner = (winner) => {
     win.textContent = `Player ${winner} wins!`;
+    win.classList.add("show-winner");
     disableBox();
 };
 
 let draw = () => {
     win.textContent = `It's a draw!`;
+    win.classList.add("show-winner");
     disableBox();
 };
 
@@ -70,6 +72,7 @@ reset.addEventListener("click", () => {
     O = true;
     win.textContent = "";
     document.body.style.overflow = "hidden"; // lock scroll
+    win.classList.remove("show-winner");
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
