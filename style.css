@@ -6,11 +6,7 @@
 body {
     background: linear-gradient(270deg, #2E2D4D, #615e9c, #1a1a2e, #2E2D4D);
     background-size: 400% 400%;
-    animation: gradientShift 8s ease infinite;
     overflow: hidden; /* Prevents scrollbars from appearing */
-}
-#winner {
-    text-align: center;
 }
 
 header {
@@ -118,6 +114,8 @@ header h1 {
     color: white;
     font-size: 30px;
     margin-bottom: 20px;
+    text-align: center;
+    min-height: 40px;
 }
 .particles {
     position: fixed;
@@ -190,6 +188,16 @@ header h1 {
 }
 .particles span:nth-child(18) { 
     left: 92%; animation-duration: 7s;  animation-delay: 0.8s; width: 7px;  height: 7px;  
+}
+
+@keyframes bounceIn {
+    0%   { transform: scale(0);     opacity: 0; }
+    60%  { transform: scale(1.2);   opacity: 1; }
+    100% { transform: scale(1);     opacity: 1; }
+}
+
+.show-winner {  /* this class will be added/removed by JS when a winner is determined */
+    animation: bounceIn 0.5s ease forwards;
 }
 
 @keyframes floatUp {
