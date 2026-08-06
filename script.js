@@ -54,6 +54,9 @@ let checkwin = () => {
             && box[a].textContent === box[b].textContent    // All three match
             && box[a].textContent === box[c].textContent) {
             showWinner(box[a].textContent);
+            box[a].style.backgroundColor = "green";
+            box[b].style.backgroundColor = "green";
+            box[c].style.backgroundColor = "green";
             return;
         }
     }
@@ -67,6 +70,7 @@ let checkwin = () => {
 reset.addEventListener("click", () => {
     box.forEach((b) => {
         b.textContent = "";
+        b.style.backgroundColor = "";
         b.disabled = false;
     });
     O = true;
