@@ -2,6 +2,7 @@ let box = document.querySelectorAll(".box");
 let reset = document.querySelector("#reset");
 let win = document.getElementById("winner");
 let start = document.getElementById("start");
+
 history.scrollRestoration = "manual";
 window.scrollTo(0, 0);
 
