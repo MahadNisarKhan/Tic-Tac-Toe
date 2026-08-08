@@ -223,3 +223,25 @@ header h1 {
     0%   { transform: translateY(0) scale(1); opacity: 1; }
     100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
 }
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    #screen {
+        height: 80vmin;
+        width: 80vmin;
+    }
+
+    .box {
+        height: 24vmin;
+        width: 24vmin;
+        font-size: 50px;
+    }
+
+    #winner {
+        font-size: 22px;
+    }
+}
